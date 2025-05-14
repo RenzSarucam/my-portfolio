@@ -731,6 +731,9 @@ const testimonials = [
     },
     {
         image: "/10.jpeg"
+    },
+    {
+        image: "/11.jpg"
     }
 ];
 
