@@ -22,7 +22,6 @@ export default function Navbar() {
         { name: "Educational Backgrounds", link: "#education" },
         { name: "Projects", link: "#projects" },
         { name: "Certifications", link: "#certifications" },
-        
     ];
 
     const handleLoadingChange = (loading: boolean) => {
@@ -37,7 +36,10 @@ export default function Navbar() {
             {!isLoading && (
                 <>
                     <FloatingNav navItems={navItems} />
-                    <HeroSection />
+                    <HeroSection 
+                        setShowContactModal={setShowContactModal}
+                        setActiveTab={setActiveTab}
+                    />
                     <div id="about" className="bg-black">
                         <GlowingEffectDemo />
                     </div>
@@ -195,7 +197,12 @@ export default function Navbar() {
     );
 }
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+    setShowContactModal: (show: boolean) => void;
+    setActiveTab: (tab: 'contact' | 'email') => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ setShowContactModal, setActiveTab }) => {
     return (
         <div id="home" className="min-h-screen w-full bg-black relative overflow-hidden">
             <div className="absolute inset-0">
@@ -224,11 +231,18 @@ const HeroSection: React.FC = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center w-full">
-                                <button className="px-25 py-3 rounded-2xl bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 text-white font-medium 
+                                <button 
+                                    onClick={() => {
+                                        setShowContactModal(true);
+                                        setActiveTab('contact');
+                                    }}
+                                    className="px-25 py-3 rounded-2xl bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 text-white font-medium 
                   hover:opacity-90 transition-all duration-200 shadow-lg shadow-purple-500/25">
                                     Hire Me
                                 </button>
-                                <button className="px-20 py-3 rounded-2xl border border-white/10 text-white font-medium 
+                                <button 
+                                    onClick={() => window.open('/resume2025.pdf', '_blank')}
+                                    className="px-20 py-3 rounded-2xl border border-white/10 text-white font-medium 
                   hover:bg-white/5 transition-all duration-200 backdrop-blur-sm">
                                     Download CV
                                 </button>
