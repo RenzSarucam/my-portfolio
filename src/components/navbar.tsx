@@ -230,6 +230,52 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setShowContactModal, setActiv
                                 </p>
                             </div>
 
+                            {/* Social Media Icons */}
+                            <div className="flex gap-6 mt-8">
+                                <a 
+                                    href="https://github.com/RenzSarucam" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:scale-110 transition-transform duration-200"
+                                >
+                                    <svg 
+                                        className="w-8 h-8 text-white hover:text-gray-300" 
+                                        fill="currentColor" 
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a 
+                                    href="https://www.facebook.com/renz134542770/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:scale-110 transition-transform duration-200"
+                                >
+                                    <svg 
+                                        className="w-8 h-8 text-white hover:text-gray-300" 
+                                        fill="currentColor" 
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+                                <a 
+                                    href="https://www.linkedin.com/in/renz-carljansen-sarucam-2b2b2b2b2/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:scale-110 transition-transform duration-200"
+                                >
+                                    <svg 
+                                        className="w-8 h-8 text-white hover:text-gray-300" 
+                                        fill="currentColor" 
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
                             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center w-full">
                                 <button 
                                     onClick={() => {
@@ -292,13 +338,13 @@ export function GlowingEffectDemo() {
     return (
         <div className="min-h-screen w-full bg-black">
             {/* Grid Items Section */}
-            <div className="p-8">
-                <ul className="grid h-[calc(100vh-4rem)] grid-cols-1 grid-rows-none gap-6 md:grid-cols-12 md:grid-rows-3 xl:grid-rows-2">
+            <div className="p-4 sm:p-8 max-w-7xl mx-auto">
+                <ul className="grid h-auto sm:h-[calc(100vh-4rem)] grid-cols-1 gap-4 sm:gap-6 md:grid-cols-12 md:grid-rows-3 xl:grid-rows-2">
                     <GridItem
                         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
                         icon={<Box className="h-4 w-4 text-white" />}
                         title="🧑‍💻 Hi, I'm Renz Carljansen"
-                        description="I'm a UI/UX Designer, Web Designer, and Web Developer who turns ideas into visually stunning, user-focused digital experiences. I combine design and development to build intuitive, engaging interfaces that feel as good as they look. With a strong eye for detail and a drive to keep learning, I'm always exploring new tools and technologies to create future-ready, meaningful solutions. Let's build something extraordinary together."
+                        description="I'm a UI/UX Designer, Web Designer, and Developer who transforms ideas into visually stunning, user-friendly digital experiences. With a passion for design, clean code, and continuous learning, I craft intuitive, future-ready solutions. Let's build something extraordinary."
                         image="/profpic.JPG"
                     />
 
@@ -306,7 +352,7 @@ export function GlowingEffectDemo() {
                         area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
                         icon={<Settings className="h-4 w-4 text-white" />}
                         title="💡 What I Do?"
-                        description="I design and build seamless websites and digital interfaces that are visually compelling, highly functional, and tailored to real user needs. Every project I take on is more than just pixels and code — it's about creating a full experience that feels smooth, intuitive, and purposeful.From wireframes to final development, I carefully craft each detail — ensuring that design, responsiveness, accessibility, and performance come together in perfect harmony. Whether it's a bold landing page, a clean portfolio, or a complex web app, I make sure the end result not only looks great but works flawlessly across all devices."
+                        description="I design and build seamless, user-focused websites and interfaces that are visually compelling, responsive, and accessible. From wireframes to final code, I craft every detail to ensure smooth, intuitive experiences that work flawlessly across all devices."
                         image="/WHAT.png"
                     />
 
@@ -314,7 +360,7 @@ export function GlowingEffectDemo() {
                         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
                         icon={<Lock className="h-4 w-4 text-white" />}
                         title="🧠 Why I Do It?"
-                        description="Designing is more than just a job for me — it's my way of solving real problems through creativity and logic. I find fulfillment in transforming complex ideas or challenges into clean, user-centered experiences that feel intuitive and effortless.Whether it's a simple website or a full digital product, I approach each project with empathy, always thinking from the user's perspective. I love the challenge of balancing aesthetics with function — crafting experiences that not only look great but work beautifully. Every project is an opportunity to make technology feel more human."
+                        description="Design isn't just what I do it's how I solve problems with creativity and purpose. I turn complex ideas into intuitive, user-centered experiences that balance beauty and function. For me, every project is a chance to make technology feel more human."
                         image="/WHY.png"
                     />
 
@@ -343,11 +389,11 @@ export function GlowingEffectDemo() {
             </div>
             
             {/* Projects Section */}
-            <div id="projects" className="w-full ">
+            <div id="projects" className="w-full">
                 <AnimatedPinDemo />
                 
                 {/* Certifications Section with Moving Cards */}
-                <div id="certifications" className="w-full mt-96 pb-20">
+                <div id="certifications" className="w-full mt-48 sm:mt-96 pb-20">
                     <InfiniteMovingCardsDemo />
                 </div>
             </div>
@@ -365,7 +411,7 @@ interface GridItemProps {
 
 const GridItem = ({ area, icon, title, description, image }: GridItemProps) => {
     return (
-        <li className={`min-h-[14rem] list-none ${area}`}>
+        <li className={`min-h-[16rem] sm:min-h-[14rem] list-none ${area}`}>
             <div className="relative h-full rounded-2xl border border-white/10 p-2 md:rounded-3xl md:p-3">
                 <GlowingEffect
                     spread={40}
@@ -374,7 +420,7 @@ const GridItem = ({ area, icon, title, description, image }: GridItemProps) => {
                     proximity={64}
                     inactiveZone={0.01}
                 />
-                <div className="border-0.75 relative flex h-full flex-col gap-4 overflow-hidden rounded-xl p-6 md:p-6 bg-white/5 backdrop-blur-sm">
+                <div className="border-0.75 relative flex h-full flex-col gap-3 sm:gap-4 overflow-hidden rounded-xl p-4 sm:p-6 bg-white/5 backdrop-blur-sm">
                     {/* Background Image */}
                     {image && (
                         <div className="absolute inset-0 -z-10">
@@ -382,7 +428,7 @@ const GridItem = ({ area, icon, title, description, image }: GridItemProps) => {
                                 src={image}
                                 alt="Background"
                                 fill
-                                className={`object-cover opacity-50 ${
+                                className={`object-cover opacity-40 ${
                                     title.includes("What I Do") || 
                                     title.includes("Always Learning") || 
                                     title.includes("Let's Collaborate") 
@@ -395,16 +441,16 @@ const GridItem = ({ area, icon, title, description, image }: GridItemProps) => {
                     )}
                     
                     {/* Content */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3 sm:gap-4">
                         <div className="w-fit rounded-lg border border-white/20 p-2">
                             {icon}
                         </div>
-                        <h3 className="-tracking-4 font-sans text-xl/[1.375rem] font-semibold text-balance text-white md:text-2xl/[1.875rem]">
+                        <h3 className="-tracking-4 font-sans text-lg sm:text-xl/[1.375rem] font-semibold text-balance text-white md:text-2xl/[1.875rem]">
                             {title}
                         </h3>
                     </div>
-                    <div className="flex-1 flex items-center justify-center px-2">
-                        <h2 className="font-sans text-sm/[1.375rem] text-white/70 md:text-base/[1.675rem] text-justify hyphens-auto">
+                    <div className="flex-1 flex items-center justify-center px-1 sm:px-2">
+                        <h2 className="font-sans text-xs sm:text-sm/[1.375rem] text-white/70 md:text-base/[1.675rem] text-justify hyphens-auto">
                             {description}
                         </h2>
                     </div>
@@ -594,7 +640,7 @@ export function AnimatedPinDemo() {
         },
         {
             title: "JIT (Jairo Institute of Technology) Design",
-            description: "Culinary app for discovering recipes based on available ingredients with filtering and saving options.",
+            description: " A creative division of JIT focused on innovative, user-centered design solutions. It blends technology and aesthetics to deliver modern, functional, and impactful digital experiences.",
             link: "https://www.figma.com/design/aMb9FTGYo8G0MlHldnoxxa/MVP-%7C-JIT?node-id=352-2321&t=7TiJ5HnhQp1ffiPJ-1",
             color: "from-yellow-500 via-amber-500 to-orange-500",
             tags: ["Figma" ],
@@ -602,13 +648,13 @@ export function AnimatedPinDemo() {
             image: "/jit.png"
         },
         {
-            title: "Travel Planner",
-            description: "Trip planning application with itinerary creation, expense tracking, and location recommendations.",
+            title: "Jairosoft ELMS Designer",
+            description: " A smart e-learning platform with tools for course management, student tracking, and interactive learning—making online education simple and effective.",
             link: "https://github.com",
             color: "from-red-500 via-pink-500 to-rose-500",
-            tags: ["React", "Node.js", "Google Maps API"],
-            icon: "✈️",
-            image: "/AL.png"
+            tags: ["Figma"],
+            icon: "🎓",
+            image: "/elms.png"
         }
     ];
     
